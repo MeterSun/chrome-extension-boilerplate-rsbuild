@@ -1,0 +1,21 @@
+{
+  "name": "chrome-extension-boilerplate",
+  "version": "1.0.0",
+  "description": "chrome extension boilerplate",
+  "author": "Your Name",
+  "manifest_version": 3,
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "options_page": "options.html",
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content-script.js"]
+    }
+  ],
+  "permissions": ["activeTab", "storage"]
+}
